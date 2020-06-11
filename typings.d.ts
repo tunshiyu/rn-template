@@ -3,8 +3,8 @@
  * @公司: thundersdata
  * @作者: 陈杰
  * @Date: 2019-10-09 21:11:04
- * @LastEditors: 陈杰
- * @LastEditTime: 2020-04-20 15:58:42
+ * @LastEditors: 于效仟
+ * @LastEditTime: 2020-06-10 12:22:23
  */
 type Merge<M, N> = Omit<M, Extract<keyof M, keyof N>> & N;
 
@@ -35,3 +35,4 @@ declare module 'react-native-switch' {
 }
 
 declare module 'react-native-safe-area-view';
+declare module 'react-native-verification';

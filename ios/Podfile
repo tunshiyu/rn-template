@@ -37,6 +37,8 @@ target 'luneng' do
   pod 'Permission-Camera', :path => "../node_modules/react-native-permissions/ios/Camera.podspec"
   pod 'Permission-PhotoLibrary', :path => "../node_modules/react-native-permissions/ios/PhotoLibrary.podspec"
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'lunengTests' do
     inherit! :search_paths
     # Pods for testing
