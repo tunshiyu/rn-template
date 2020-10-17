@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { Color, Size } from '../../config';
-import { Button, Modal, WhiteSpace } from '@ant-design/react-native';
+import { Button, Modal, WhiteSpace, Flex } from '@ant-design/react-native';
 import { signOut } from '../../utils/auth';
 import Container from '../../components/Container';
 import BackgroundImgHeader from '../../components/BackgroundImgHeader';
@@ -11,6 +11,7 @@ import { StackHeaderProps } from '@react-navigation/stack';
 import { DrawerActions } from '@react-navigation/native';
 import { SignInContext } from '../../context/SignInContext';
 import store from '../../store';
+import Verification from '../../components/CustomVerification';
 
 const { px } = Size;
 const Profile = (props: StackHeaderProps) => {
@@ -54,6 +55,11 @@ const Profile = (props: StackHeaderProps) => {
         </View>
       </BackgroundImgHeader>
       <WhiteSpace />
+
+      <Flex align="center" justify="center">
+        <Verification getValue={(value: any) => console.log(value)} />
+      </Flex>
+
       <Button style={styles.logoutBtn} onPress={() => logout()}>
         <Text style={styles.logoutText}>退出登录</Text>
       </Button>
